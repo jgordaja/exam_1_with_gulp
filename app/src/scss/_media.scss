@@ -1,0 +1,189 @@
+@import 'mixins'; 
+
+@media screen and (max-width: 1220px) {
+    .reviews_section {
+        .reviews__block {
+            justify-content: space-evenly;
+
+            .review__item {
+                width: 50%;
+            }
+        }
+    }
+
+    .benefits {
+        .benefits__block {
+            justify-content: space-evenly;
+            gap: 30px;
+
+            .benefit_item {
+                flex: 0 0 45%; 
+
+                .benefit_item__title {
+                    word-break: break-word;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .quote_block .quote { 
+        margin: 0 auto 0 80px;
+        padding: 50px 0;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .header { 
+        .header__menu { 
+            transform: translateX(100%); 
+            overflow: auto;
+            position: fixed;
+            justify-content: center;
+            flex-direction: column; 
+            align-items: center; 
+            background-color: #fff;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 0; 
+            height: 100vh;
+            padding: 0;
+            box-sizing: border-box; 
+            z-index: 1; 
+            transition: transform 0.8s ease;
+            background: white;
+            
+            &.active { 
+                transform: translateX(0); 
+                width: 100%; 
+                padding: 20px; 
+            }
+
+            .menu__item {
+                margin: 0 !important;
+                padding: 15px 0;
+                width: 100%;
+                text-align: center;
+                @include font(18px, 24px, 0.08em); 
+            }
+        } 
+
+        .header__burger {
+            display: inline-block;
+        }
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .title {
+        @include font(30px, 38px);
+    }
+
+    .info .info__list .list__item .count {
+        @include font(56px, 60px);
+    }
+    
+    .first_scrin {
+        padding: 50px 0;
+    }
+
+    .info {
+        .info__bg {
+            padding-bottom: 0;
+        }
+
+        .info__block {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .info__list {
+            min-width: unset;
+            max-width: 370px;
+        }
+    }
+
+    .section,  .reviews_section, .contact_section{
+        margin-bottom: 50px;
+    }
+
+    .video__container .video__inner #custom_video_button {
+        width: 80px;
+        height: 80px;
+    }
+
+    .video__container .video__block::after {
+        width: 20px;
+        height: 20px;
+    }
+
+    .quote_block .quote { 
+        margin: 0 auto;
+        padding: 40px 0;
+
+        .quote__text {
+            @include font(24px, 38px, 0.06em); 
+
+            &::before {
+                background: none; 
+            }
+        }
+
+        .quote__caption, .quote__text {
+            padding: 0 15px;
+        }
+    }
+
+    .promises_section .promises__bg {
+        padding: 45px 15px;
+        background: linear-gradient(0deg, rgba(25, 28, 41, 0.84), rgba(25, 28, 41, 0.84));
+
+
+        .promises__block {
+            padding: 15px;
+            gap: 20px; 
+            justify-content: center;
+        }
+    }
+    
+    .reviews_section {
+        .reviews__block {
+            justify-content: center;
+
+            .review__item {
+                width: 100%;
+            }
+        }
+    }
+
+    .benefits {
+        .benefits__block {
+            justify-content: space-evenly;
+            gap: 15px;
+
+            .benefit_item {
+                flex: 0 0 100%; 
+            }
+        }
+    }
+
+    .contact_section {
+        .contact__block {
+            padding-top: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+    }
+
+    .footer {
+        .footer__inner {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+}
