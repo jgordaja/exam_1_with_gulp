@@ -1,0 +1,41 @@
+@import 'vars';
+
+@mixin latoLight {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+@mixin latoRegular {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+@mixin latoSemibold {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+
+@mixin latoBold{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+@mixin playfair{
+    font-family: 'Playfair Display', serif;
+    
+    font-weight: 400;
+}
+
+@mixin font($fs, $lh, $ls: normal) {
+    font-size: $fs;
+    line-height: $lh; 
+    letter-spacing: $ls;
+}
+
+@mixin transition($time) {
+	transition: all $time ease;
+}
+
+@mixin color_and_opacity($opacity) { 
+    color: rgba(38, 42, 63, $opacity);
+}

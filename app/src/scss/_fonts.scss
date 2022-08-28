@@ -1,0 +1,57 @@
+// Playfair Display
+// font-family: 'Playfair Display', serif;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
+
+// Lato
+// font-family: 'Lato', sans-serif; 
+@font-face {
+    // font-family: 'Lato Light';
+    font-family: 'Lato'; 
+    font-weight: 300;
+    font-style: normal;
+    src: url('../fonts/Lato-Light.woff2') format('woff2');
+    src: url('../fonts/Lato-Light.woff2') format('woff2'),
+        url('../fonts/Lato-Light.woff') format('woff'), 
+        url('../fonts/Lato-Light.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/Lato-Light.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    // font-family: 'Lato Regular';
+    font-family: 'Lato'; 
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Lato-Regular.woff2') format('woff2');
+    src: url('../fonts/Lato-Regular.woff2') format('woff2'),
+        url('../fonts/Lato-Regular.woff') format('woff'), 
+        url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/Lato-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    // font-family: 'Lato Semibold';
+    font-family: 'Lato'; 
+    font-weight: 600;
+    font-style: normal;
+    src: url('../fonts/Lato-Semibold.woff2') format('woff2');
+    src: url('../fonts/Lato-Semibold.woff2') format('woff2'),
+        url('../fonts/Lato-Semibold.woff') format('woff'), 
+        url('../fonts/Lato-Semibold.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/Lato-Semibold.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    // font-family: 'Lato Bold';
+    font-family: 'Lato'; 
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/Lato-Bold.woff2') format('woff2');
+    src: url('../fonts/Lato-Bold.woff2') format('woff2'),
+        url('../fonts/Lato-Bold.woff') format('woff'), 
+        url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'), 
+        url('../fonts/Lato-Bold.ttf') format('truetype');
+    font-display: swap;
+}

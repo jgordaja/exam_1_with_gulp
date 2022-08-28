@@ -1,0 +1,35 @@
+$color: rgb(38, 42, 63);
+$cursiveColor: #85BBB1;
+
+$colorLinkDefaultLight: rgba(241, 137, 123, 0.3);
+$colorLinkActiveLight: rgba(229, 79, 58, 0.3); 
+
+$colorLinkDefault: rgb(241, 137, 123); 
+$colorLinkActive: rgb(229, 79, 58);
+
+%linkDefaultLight {
+    color: $colorLinkDefaultLight; 
+}
+
+%linkActiveLight {
+    color: $colorLinkActiveLight; 
+}
+
+// $colorLinkDefaultBlack: rgba(83, 243, 205, 0.3); 
+// $colorLinkActiveBlack: rgba(2, 224, 171, 0.3);
+
+// %linkDefaultBlack {
+//     color: $colorLinkDefaultBlack; 
+// }
+
+// %linkDefaultBlack {
+//     color: $colorLinkActiveBlack; 
+// } 
+
+// $colorLinkDefault: $colorLinkDefaultBlack; 
+// $colorLinkActive: $colorLinkActiveBlack;
+
+%flex {
+    display: flex;
+    justify-content: space-between;
+} 
