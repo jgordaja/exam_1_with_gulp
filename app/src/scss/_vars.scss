@@ -15,6 +15,13 @@ $colorLinkActive: rgb(229, 79, 58);
     color: $colorLinkActiveLight; 
 }
 
+%flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+// vars for black theme
+
 // $colorLinkDefaultBlack: rgba(83, 243, 205, 0.3); 
 // $colorLinkActiveBlack: rgba(2, 224, 171, 0.3);
 
@@ -28,8 +35,3 @@ $colorLinkActive: rgb(229, 79, 58);
 
 // $colorLinkDefault: $colorLinkDefaultBlack; 
 // $colorLinkActive: $colorLinkActiveBlack;
-
-%flex {
-    display: flex;
-    justify-content: space-between;
-} 

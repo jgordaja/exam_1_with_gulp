@@ -110,9 +110,12 @@
         margin-bottom: 50px;
     }
 
-    .video__container .video__inner #custom_video_button {
-        width: 80px;
-        height: 80px;
+    .lazyframe[data-vendor="youtube"],
+    .lazyframe[data-vendor="youtube_nocookie"] {
+        &::after {
+            width: 80px;
+            height: 80px;
+        }
     }
 
     .video__container .video__block::after {

@@ -1,0 +1,22 @@
+.lazyframe[data-vendor="youtube"],
+.lazyframe[data-vendor="youtube_nocookie"] {
+    &::after {
+        width: 120px;
+        height: 120px;
+        margin: 0;
+        transform: translate(-50%, -50%);
+        background-image: url('../img/video/icon_play.svg');
+        cursor: pointer; 
+    } 
+    &:hover::after {
+        background-image: url('../img/video/icon_play.svg'); 
+    } 
+
+    .lazyframe__title {
+        font-size: 0;
+        color: rgba(255, 255, 255, 0);
+        &::before {
+            background: none;
+        }
+    }
+}

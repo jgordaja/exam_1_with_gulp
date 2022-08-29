@@ -24,18 +24,4 @@ $(document).ready(function() {
         $('body').toggleClass('lock'); 
     })
 
-    // запуск відтворення youtube-відео при натисканні кастомної псевдо-кнопки
-    const  customVideoButton = $('#custom_video_button');
-    const screensaver = $('#screensaver');
-    const iframeVideo = $('#iframeVideo');
-
-    customVideoButton.click( function() {
-        iframeVideo[0].src += "?autoplay=1";
-        setTimeout(function(){
-            // приховати кнопку і картинку з затримкою в 500мс щоб відео встигло почати відтворюватися
-            customVideoButton.css('display', 'none');
-            screensaver.css('display', 'none'); 
-        }, 500); 
-    })
-
 });

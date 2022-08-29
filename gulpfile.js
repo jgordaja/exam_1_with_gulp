@@ -22,26 +22,38 @@ function browsersync() {
 }
 
 function styles() {
-    return src(
-        [
-            'app/src/scss/index.scss', 
-            // 'app/src/css/preloader.css'
-        ])
+    return src([
+        'app/src/lazyframe/lazyframe.css',
+        'app/src/scss/index.scss'
+    ])
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.init())
         .pipe(concat('style.min.css')) 
         .pipe(autoprefixer({ 
             // overrideBrowserslist: ['last 5 versions'], // added browserslist in package.json
+            // станні 5 версій УСІХ браузерів (and dead), якими користуються більше 0.5% користувачів
             flexbox: true,
-            grid: true,
-
+            grid: true, 
         }))
         .pipe(cleanCSS({specialComments: 0}))
         .pipe(sourcemaps.write('.'))
         .pipe(dest('app/dist/css')) 
         .pipe(browserSync.stream())
-    } 
+} 
 
+// сгенерувала критичні стилі окремо, потім скопіювала і вставила їх в <head>
+function criticalStyles() {
+    return src(['app/src/scss/critical.scss'])
+        .pipe(sass().on('error', sass.logError)) 
+        .pipe(autoprefixer({ 
+            flexbox: true,
+            grid: true, 
+        }))
+        .pipe(cleanCSS({specialComments: 0})) 
+        .pipe(dest('app/dist/css')) 
+}    
+
+// спробувала, не сподобалось
 // gulp critical
 // critical.generate({
 //     inline: true,
@@ -57,9 +69,9 @@ function styles() {
 // }); 
 
 function scripts() {
-    return src([
+    return src([ 
+        'app/src/lazyframe/lazyframe.min.js',
         'app/src/js/index.js',
-        // 'app/src/js/lazysizes.min.js'
     ])
     .pipe(sourcemaps.init())
     .pipe(concat('main.min.js')) 
@@ -78,13 +90,14 @@ function images() {
 }
 
 function startWatch() {
-    watch(['app/src/**/*.js', '!app/src/**/*.min.js', '!app/src/**/*.js'], scripts)
+    watch(['app/src/**/*.js', '!app/dist/**/*.min.js', '!app/dist/**/*.js'], scripts)
     watch(['app/src/**/*.scss'], styles)
 }
 
-exports.browsersync = browsersync;
+exports.browsersync = browsersync; 
+exports.criticalStyles = criticalStyles;
 exports.styles = styles;
 exports.scripts = scripts; 
 exports.images = images; 
 
-exports.default = parallel(styles, images, scripts, browsersync, startWatch);
+exports.default = parallel(criticalStyles, styles, images, scripts, browsersync, startWatch);
